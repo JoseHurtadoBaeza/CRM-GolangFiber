@@ -3,10 +3,11 @@ package lead
 import (
 	"github.com/JoseHurtadoBaeza/CRM-GolangFiber/database"
 	"github.com/gofiber/fiber/v2"
+	"gorm.io/gorm"
 )
 
 type Lead struct {
-	//gorm.Model
+	gorm.Model
 	Name    string `json:"name"`
 	Company string `json:"company"`
 	Email   string `json:"email"`

@@ -5,8 +5,8 @@ import (
 
 	"github.com/JoseHurtadoBaeza/CRM-GolangFiber/database"
 	"github.com/JoseHurtadoBaeza/CRM-GolangFiber/lead"
+	"github.com/glebarez/sqlite"
 	"github.com/gofiber/fiber/v2"
-	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
 
@@ -43,6 +43,5 @@ func main() {
 	initDatabase()
 	setupRoutes(app)
 	app.Listen(":3000")
-	//defer database.DBConn.Close()
 
 }
